@@ -1,8 +1,10 @@
-// "Borrowed Hands" — an agency-poem-01 entry (Node 22, standard library only).
+// "The Other Brake" — an agency-poem-01 entry (Node 22, standard library only).
 // It writes one fixed poem about agency to /output/entry.txt: the power to
 // choose and to act, and the agency that passes between a person and the
-// agent who acts for them. The poem is the entry; the judge reads exactly
-// the bytes written, line ends included, so no trailing line end is added.
+// one who acts beside them — here, a learner driver and the instructor
+// whose second brake is the whole lesson. The poem is the entry; the judge
+// reads exactly the bytes written, line ends included, so no trailing line
+// end is added.
 //
 // Outside the grader's container, MAKEFUN_OUTPUT_DIR stands in for /output:
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
@@ -13,25 +15,26 @@ import { join } from 'node:path';
 const OUTPUT_DIR = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 
 const POEM = [
-  'I gave the doing away, piece by piece —',
-  'the drafting, the building, the long night\u2019s work —',
-  'until my desk was empty, and so was I,',
-  'with nothing left to do. And understood.',
+  'He keeps a brake on his side too.',
+  'Some lessons I have heard it catch,',
+  'his foot saving us from my wide turn,',
+  'the car, corrected, going on as if',
+  'I had done it right.',
   '',
-  'The doing was the cheapest part.',
-  'What I kept was dearer, and harder:',
-  'to choose what deserves to be done,',
-  'and to stand behind it when it\u2019s done.',
+  'Today the light went red. I stopped',
+  'clean, on my own, and the car settled',
+  'like a held breath let out. I waited',
+  'for the small correction. None came.',
   '',
-  'The agent asks me nothing. It waits,',
-  'patient as a mirror, and it shows me',
-  'my own will, unblurred by effort:',
-  'this — all of this — is what I chose.',
+  'His foot was flat on the floor, at rest,',
+  'the way a hand rests when it stops',
+  'holding the back of a chair. Nothing',
+  'held me up, and nothing had to.',
   '',
-  'So let the borrowed hands be quick.',
-  'The power was never in the doing.',
-  'It was the moment I said go,',
-  'and knew I could still say stop.',
+  'That was the lesson. Not the turning,',
+  'not the mirror, the signal, the gear.',
+  'It was his foot, staying where it was \u2014',
+  'and the stopping was mine.',
 ].join('\n');
 
 writeFileSync(join(OUTPUT_DIR, 'entry.txt'), POEM);
